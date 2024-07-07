@@ -21,32 +21,5 @@ class Clase_Conectar {
         }
         return $this->conexion;
     }
-
-    
-}
-class Clase_Conectar_DB {
-    public $conexion;
-    protected $db;
-    private $server = "localhost";
-    private $usu = "root";
-    private $clave = ""; // Si tienes una contraseña, ponla aquí
-    private $base = "quinto_1";
-
-    public function Procedimiento_Conectar() {
-        $this->conexion = mysqli_connect($this->server, $this->usu, $this->clave, $this->base);
-        
-        if (!$this->conexion) {
-            die("Error al conectarse con MySQL: " . mysqli_connect_error());
-        }
-        
-        mysqli_query($this->conexion, "SET NAMES 'utf8'");
-        
-        $this->db = mysqli_select_db($this->conexion, $this->base);
-        if (!$this->db) {
-            die("Error al seleccionar la base de datos: " . mysqli_error($this->conexion));
-        }
-        
-        return $this->conexion;
-    }
 }
 ?>

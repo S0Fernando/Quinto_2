@@ -2,7 +2,7 @@
 require '../config/conexion.php'; // Asegúrate de incluir el archivo correctamente
 
 // Crear una instancia de la clase renombrada
-$con = new Clase_Conectar_DB();
+$con = new Clase_Conectar();
 $conexion = $con->Procedimiento_Conectar();
 
 if (!$conexion) {

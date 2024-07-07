@@ -1,7 +1,7 @@
 phpCopy<?php
 require_once '../config/conexion.php';
 
-$conexion = new Clase_Conectar_DB();
+$conexion = new Clase_Conectar();
 $conn = $conexion->Procedimiento_Conectar();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
