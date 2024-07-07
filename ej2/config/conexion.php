@@ -1,6 +1,4 @@
 <?php
-// File: config/conexion.php
-
 class Clase_Conectar {
     public $conexion;
     protected $db;
